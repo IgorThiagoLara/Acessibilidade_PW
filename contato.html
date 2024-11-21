@@ -7,6 +7,8 @@
     <title>Contato</title>
     <link rel="stylesheet" href="./CSS/contato.css">
     <link rel="stylesheet" href="./CSS/padrao.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
     <header>
@@ -15,21 +17,21 @@
 
     <main>
         <section class="main_titulo">
-            <h2 class="titulo">Entre em Contato</h1>
+            <h2 class="titulo">Entre em Contato</h2>
             <p>Preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
         </section>
 
         <section class="formulario">
-            <form aria-label="Formulário de contato" class="formulario_form">
+            <form id="formContato" aria-label="Formulário de contato" class="formulario_form">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
-                
-                <label class="label" for="email">E-mail:</label>
+
+                <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
-                
+
                 <label for="mensagem">Mensagem:</label>
                 <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required></textarea>
-                
+
                 <button type="submit">Enviar</button>
             </form>
         </section>
@@ -48,5 +50,38 @@
     <footer>
         <p>&copy; 2024 - Portal da Acessibilidade | Criado por Igor Thiago</p>
     </footer>
+
+    <script type="text/javascript">
+        emailjs.init("Ffa0nO-mpK-X-hzQE"); 
+
+        document.getElementById("formContato").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const mensagem = document.getElementById("mensagem").value;
+
+            if (!nome || !email || !mensagem) {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+
+            const templateParams = {
+                nome: nome,
+                email: email,
+                mensagem: mensagem
+            };
+
+            emailjs.send("service_k71fowh", "template_dytarnd", templateParams)
+                .then(function(response) {
+                    console.log("Email enviado com sucesso:", response);
+                    alert("Sua mensagem foi enviada com sucesso!");
+                    document.getElementById("contactForm").reset();
+                }, function(error) {
+                    console.error("Erro ao enviar o e-mail: ", error);
+                    alert("Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde.");
+                });
+        });
+    </script>
 </body>
 </html>
