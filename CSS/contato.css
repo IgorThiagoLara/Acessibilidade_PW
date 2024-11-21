@@ -1,14 +1,11 @@
-
-
-/* Estilos principais do corpo */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
     display: flex;
-    flex-direction: column; /* Organiza o conteúdo em coluna */
-    justify-content: space-between; /* Mantém o header no topo e o footer no final */
+    flex-direction: column;
+    justify-content: space-between; 
     height: 100%;
 }
 html, body {
@@ -23,10 +20,6 @@ h2, h3 {
     margin-top: 20px;
 }
 
-
-
-
-/* Estilos do conteúdo principal */
 main {
     padding: 20px;
     background-color: #e3f2fd;
@@ -35,7 +28,6 @@ main {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos do título principal */
 .main_titulo {
     text-align: center;
     margin-bottom: 20px;
@@ -52,7 +44,6 @@ main {
     color: #555;
 }
 
-/* Estilos do formulário */
 .formulario {
     display: flex;
     justify-content: center;
@@ -65,7 +56,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     width: 100%;
-    max-width: 550px; /* Limita a largura do formulário */
+    max-width: 550px;
     margin: 0 auto;
 }
 
@@ -112,8 +103,6 @@ main {
     margin-top: 100px;
 }
 
-
-/* Responsividade */
 @media (max-width: 768px) {
     .main_titulo h1 {
         font-size: 1.8rem;

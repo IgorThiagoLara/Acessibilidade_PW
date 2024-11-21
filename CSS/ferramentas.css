@@ -12,8 +12,8 @@ main {
 
 body {  
     display: flex;
-    flex-direction: column; /* Organiza o conteúdo em coluna */
-    justify-content: space-between; /* Mantém o header no topo e o footer no final */
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 h2, h3 {
@@ -23,20 +23,20 @@ h2, h3 {
     margin-top: 20px;
 }
 
-.tools ul, .resources ul {
+.ferramentas ul, .recursos ul {
     list-style-type: disc;
     padding-left: 20px;
 }
 
-.tools li, .resources li {
+.ferramentas li, .recursos li {
     margin-bottom: 10px;
 }
 
-.tools a, .resources a {
+.ferramentas a, .recursos a {
     color: #0055a4;
     text-decoration: none;
 }
 
-.tools a:hover, .resources a:hover {
+.ferramentas a:hover, .recursos a:hover {
     text-decoration: underline;
 }   

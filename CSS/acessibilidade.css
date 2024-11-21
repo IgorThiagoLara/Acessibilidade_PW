@@ -15,18 +15,18 @@ html, body {
 
 main {
     padding: 20px;
-    margin: 0 auto;
     background-color: #e3f2fd;
     flex: 1;
 }
 
+
 body {
     display: flex;
-    flex-direction: column; /* Organiza o conteúdo em coluna */
-    justify-content: space-between; /* Mantém o header no topo e o footer no final */
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.introduction, .examples {
+.introducao, .exemplos {
     margin-bottom: 20px;
     padding: 15px;
     background-color: #e8f4fc;
