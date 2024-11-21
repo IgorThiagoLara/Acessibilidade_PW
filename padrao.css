@@ -1,0 +1,76 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header, nav ul, footer {
+    background-color: #0055a4;
+    color: #fff;
+    padding: 10px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+nav {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: #0055a4;
+    color: #fff;
+    padding: 10px;
+    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    margin-top: 60px; /* Ajuste conforme a altura do seu menu */
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav ul a:hover, nav ul a:focus {
+    background-color: #003d73;
+    outline: none;
+}
+
+/* Footer */
+footer p {
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,143 @@
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 20px;
+    background-color: #e3f2fd;
+}
+
+.hero h2 {
+    color: #0055a4;
+}
+
+.hero-img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* About Section */
+.about {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.about ul {
+    padding-left: 20px;
+    list-style: disc;
+}
+
+/* Benefits Section */
+.benefits_container {
+    background-color: #e8f5e9;
+    padding: 10px;
+}
+
+.benefits_container div {
+    text-align: center;
+}
+
+.benefits {
+    
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.benefit {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 30%;
+    min-width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.benefit h3 {
+    color: #0055a4;
+    margin-bottom: 10px;
+}
+
+.benefit p {
+    font-size: 14px;
+}
+
+/* Estilo para a seção 'about' */
+.about {
+    background-color: #f4f8fc; /* Fundo claro e agradável */
+    padding: 30px;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+}
+
+.about h2 {
+    color: #0055a4; /* Cor em destaque */
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 2px;
+}
+
+.about p {
+    color: #333; /* Texto mais escuro para contraste */
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about ul {
+    margin-top: 20px;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.about li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    display: flex; /* Permite alinhar os textos em linha */
+    align-items: flex-start; /* Alinha os itens no topo */
+    min-height: 50px; /* Altura mínima para manter uniformidade */
+}
+
+.about li strong {
+    width: 200px; /* Define uma largura fixa para os títulos */
+    flex-shrink: 0; /* Impede que o texto de <strong> diminua */
+    color: #0055a4; /* Destaque para os títulos */
+    font-weight: bold;
+}
+
+.about li span {
+    flex-grow: 1; /* Faz o restante do texto ocupar o espaço necessário */
+}
+
+.about ul li::marker {
+    color: #0055a4; /* Cor do marcador da lista */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .about {
+        padding: 20px;
+    }
+
+    .about h2 {
+        font-size: 1.5em;
+    }
+
+    .about p,
+    .about li {
+        font-size: 1em;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .benefit {
+        width: 100%;
+    }
+}
